@@ -1,0 +1,13 @@
+---
+
+- name: CONTAINERD | Include variables based on the environment
+  include_vars: "{{ ansible_os_family | lower }}.yml"
+
+- name: CONTAINERD | Include OS actions
+  include_tasks: "{{ ansible_os_family | lower }}.yml"
+
+- name: CONTAINERD | Installation
+  import_tasks: install.yml
+
+- name: CONTAINERD | Configuration
+  import_tasks: config.yml

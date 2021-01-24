@@ -1,0 +1,7 @@
+---
+
+- hosts: containerd
+  remote_user: vagrant
+  become: yes
+  roles:
+    - containerd

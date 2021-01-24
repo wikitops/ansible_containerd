@@ -1,0 +1,8 @@
+---
+
+###
+# Debian
+###
+
+# DEB package URL
+containerd_package_name: "containerd.io={{ containerd_version }}"

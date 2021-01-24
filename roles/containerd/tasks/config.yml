@@ -1,0 +1,10 @@
+---
+
+- name: CONTAINERD CONFIG | Defaults
+  template:
+    src: etc/containerd/config.toml.j2
+    dest: /etc/containerd/config.toml
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart containerd

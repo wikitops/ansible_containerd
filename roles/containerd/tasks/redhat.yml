@@ -1,0 +1,10 @@
+---
+
+- name: CONTAINERD REDHAT | Repository
+  yum_repository:
+    name: docker-ce-stable
+    description: "Docker CE Stable"
+    state: present
+    baseurl: "https://download.docker.com/linux/centos/$releasever/$basearch/stable"
+    gpgcheck: yes
+    gpgkey: "https://download.docker.com/linux/centos/gpg"

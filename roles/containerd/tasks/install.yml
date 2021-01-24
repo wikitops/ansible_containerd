@@ -1,0 +1,7 @@
+---
+
+- name: CONTAINERD INSTALL | Package
+  package:
+    name: "{{ containerd_package_name }}"
+    state: present
+  notify: Restart containerd

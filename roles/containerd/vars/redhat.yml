@@ -1,0 +1,8 @@
+---
+
+###
+# RedHat
+###
+
+# RPM package URL
+containerd_package_name: "containerd.io-{{ containerd_version }}"

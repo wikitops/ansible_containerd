@@ -1,0 +1,19 @@
+---
+
+- name: CONTAINERD DEBIAN | Prerequisites
+  package:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - software-properties-common
+    state: present
+
+- name: CONTAINERD DEBIAN | Repository key
+  apt_key:
+    url: "https://download.docker.com/linux/debian/gpg"
+    state: present
+
+- name: CONTAINERD DEBIAN | Repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+    state: present
