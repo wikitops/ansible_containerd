@@ -1,6 +1,6 @@
-# Ansible : Playbook Buildah
+# Ansible : Playbook Containerd
 
-The aim of this project is to deploy Buildah on a Vagrant instance.
+The aim of this project is to deploy Containerd on a Vagrant instance.
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ Be aware that you need to be in the Vagrant directory to be able to run the comm
 
 #### Deployment
 
-To deploy Buildah on a Vagrant instance, just run this command :
+To deploy Containerd on a Vagrant instance, just run this command :
 
 ```bash
 $ vagrant up
@@ -35,10 +35,10 @@ $ vagrant status
 
 Current machine states:
 
-buildah01                   running (virtualbox)
+containerd01                   running (virtualbox)
 ```
 
-If everything run as expected, you should have a running instance of Buildah on the Vagrant node.
+If everything run as expected, you should have a running instance of Containerd on the Vagrant node.
 
 #### Destroy
 
@@ -54,15 +54,15 @@ This section list some simple command to use and manage the playbook and the Vag
 
 #### Update with Ansible
 
-To update the Buildah instance configuration with Ansible, you just have to run the Ansible playbook buildah.yml with this command :
+To update the Containerd instance configuration with Ansible, you just have to run the Ansible playbook containerd.yml with this command :
 
 ```bash
-$ ansible-playbook buildah.yml
+$ ansible-playbook containerd.yml
 ```
 
 #### Update with Vagrant
 
-To update the Buildah instance configuration with Vagrant, you just have to run provisioning part of the Vagrant file :
+To update the Containerd instance configuration with Vagrant, you just have to run provisioning part of the Vagrant file :
 
 ```bash
 $ vagrant provision
@@ -73,7 +73,7 @@ $ vagrant provision
 To be able to connect to a Vagrant instance, you should use the CLI which is configured to automatically use the default SSH key :
 
 ```bash
-$ vagrant ssh buildah01
+$ vagrant ssh containerd01
 ```
 
 ## Author
